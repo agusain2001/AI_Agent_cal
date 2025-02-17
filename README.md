@@ -18,7 +18,7 @@ Before running the project, ensure you have the following installed and set up:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repository/google-calendar-openai.git
+   git clone https://github.com/agusain2001/AI_Agent_cal.git
    ```
 2. Navigate to the project directory:
    ```bash
