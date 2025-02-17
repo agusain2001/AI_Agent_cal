@@ -25,9 +25,9 @@ Before running the project, ensure you have the following installed and set up:
    cd google-calendar-openai
    ```
 3. Install the required dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
+     ```bash
+     pip install -r requirements.txt
+     ```
 
 ##Configuration
 
@@ -37,11 +37,55 @@ The application uses the following configuration files:
 
 - **config.py**: Configuration for the Flask app and any additional settings.
 
+## Usage
+   
+ 1. To start the Flask application, run the following command in the terminal:
+   ```bash
+      python app.py
+   ```
+ 2. The following API endpoints are available:
 
+   - **POST /create_event**: Create a new event in the calendar.
 
+   - **GET /get_event**: Retrieve event details using event ID.
 
+   - **PUT /update_event**: Update an existing event using event ID.
 
+   - **DELETE /delete_event**: Delete an event using event ID.
 
+## API Example Usage
+   Examples of API requests to interact with the Google Calendar through OpenAI function calling:
+
+1. **POST /create_event**: Example request body
+      ```bash
+      {
+       "summary": "Team Meeting",
+       "start_time": "2025-02-25T09:00:00",
+       "end_time": "2025-02-25T10:00:00",
+       "description": "Discuss project updates",
+       "location": "Conference Room 1"
+      }
+      ```
+ 2. **GET /get_event**: Example request
+    ```bash
+      GET /get_event?event_id=event_id_here
+    ```
+3. **PUT /update_event**: Example request body
+   ```bash
+   {
+       "event_id": "event_id_here",
+       "summary": "Updated Team Meeting",
+       "start_time": "2025-02-25T10:00:00",
+       "end_time": "2025-02-25T11:00:00",
+       "description": "Discuss project updates and planning"
+   }
+   ```
+4. **DELETE /delete_event**: Example request body
+   ```bash
+   {
+       "event_id": "event_id_here"
+   }
+   ```
 
 
 
